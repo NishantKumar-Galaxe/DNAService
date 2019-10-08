@@ -21,5 +21,20 @@ namespace ClassLibrary1
         {
             return "Hello GxService, I am here";
         }
+
+        public void OneWayOperationDemo()
+        {
+            Thread.Sleep(1000);
+            return;
+        }
+
+        public string RequestReplyOperation()
+        {
+            DateTime dtStart = DateTime.Now;
+            Thread.Sleep(2000);
+            DateTime dtEnd = DateTime.Now;
+
+            return dtEnd.Subtract(dtStart).Seconds.ToString() + " seconds processing time";
+        }
     }
 }

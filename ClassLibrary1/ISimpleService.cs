@@ -14,7 +14,18 @@ namespace ClassLibrary1
         [OperationContract(IsOneWay =true)]
         void DoWork();
 
+        //Message exchange pattern, default is "RequestReply"
+        //Client waits till the response returned by service i.e. WCF Service.
+
         [OperationContract]
         string GetMessage();
+
+        [OperationContract]
+        string RequestReplyOperation();
+
+        //If IsOneWay is true, return type should be void.
+        [OperationContract(IsOneWay = true)]
+        void OneWayOperationDemo();
+
     }
 }
