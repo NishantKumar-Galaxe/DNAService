@@ -9,7 +9,7 @@ using System.Threading;
 namespace ClassLibrary1
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SimpleService" in both code and config file together.
-    public class SimpleService : ISimpleService
+    public class SimpleService : ISimpleService, IReportService
     {
         public void DoWork()
         {
@@ -26,6 +26,11 @@ namespace ClassLibrary1
         {
             Thread.Sleep(1000);
             return;
+        }
+
+        public void ProcessReport()
+        {
+            throw new NotImplementedException();
         }
 
         public string RequestReplyOperation()
