@@ -9,10 +9,12 @@ using System.Threading.Tasks;
 namespace ClassLibrary1
 {
     [ServiceContract]
-    interface IRestfulDNA
+
+    public interface IRestfulDNA
     {
         [OperationContract]
-        [WebInvoke(Method = "GET", UriTemplate = "/PayBill/{PayId}", BodyStyle = WebMessageBodyStyle.Wrapped, RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+
+        [WebGet(UriTemplate = "/PayBill/", BodyStyle = WebMessageBodyStyle.Wrapped, RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
         string RequestReplyOperation_Rest();
     }
 }

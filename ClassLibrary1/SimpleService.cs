@@ -6,8 +6,10 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading;
 
+
 namespace ClassLibrary1
 {
+    [ServiceBehavior(AddressFilterMode = AddressFilterMode.Any)]
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SimpleService" in both code and config file together.
     public class SimpleService : ISimpleService, IReportService, IRestfulDNA
     {
@@ -48,7 +50,7 @@ namespace ClassLibrary1
             Thread.Sleep(2000);
             DateTime dtEnd = DateTime.Now;
 
-            return dtEnd.Subtract(dtStart).Seconds.ToString() + " seconds processing time";
+            return dtEnd.Subtract(dtStart).Seconds.ToString() + " seconds processing time with ";
         }
     }
 }
