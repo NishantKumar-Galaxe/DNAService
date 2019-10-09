@@ -9,7 +9,7 @@ using System.Threading;
 namespace ClassLibrary1
 {
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SimpleService" in both code and config file together.
-    public class SimpleService : ISimpleService, IReportService
+    public class SimpleService : ISimpleService, IReportService, IRestfulDNA
     {
         public void DoWork()
         {
@@ -34,6 +34,15 @@ namespace ClassLibrary1
         }
 
         public string RequestReplyOperation()
+        {
+            DateTime dtStart = DateTime.Now;
+            Thread.Sleep(2000);
+            DateTime dtEnd = DateTime.Now;
+
+            return dtEnd.Subtract(dtStart).Seconds.ToString() + " seconds processing time";
+        }
+
+        public string RequestReplyOperation_Rest()
         {
             DateTime dtStart = DateTime.Now;
             Thread.Sleep(2000);
