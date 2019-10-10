@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLaer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -13,6 +14,10 @@ namespace ClassLibrary1
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SimpleService" in both code and config file together.
     public class SimpleService : ISimpleService, IReportService, IRestfulDNA
     {
+        public SimpleService()
+        {
+            EmployeeData.AddEmploeeDetails(10000, 10);
+        }
         public void DoWork()
         {
             Thread.Sleep(1000);
@@ -52,5 +57,19 @@ namespace ClassLibrary1
 
             return dtEnd.Subtract(dtStart).Seconds.ToString() + " seconds processing time with ";
         }
+
+        public List<EmployeeDetails> RequestReplyOperationV1()
+        {
+            var employeeList = EmployeeData.GetAllEmploees();
+            return employeeList;
+        }
+
+        public List<EmployeeDetails> RequestReplyOperation_RestV1()
+        {
+            //EmployeeData.AddEmploeeDetails(10000, 10);
+            var employeeList = EmployeeData.GetAllEmploees();
+            return employeeList;
+        }
+
     }
 }

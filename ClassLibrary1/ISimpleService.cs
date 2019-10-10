@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLaer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -22,6 +23,10 @@ namespace ClassLibrary1
 
         [OperationContract]
         string RequestReplyOperation();
+
+
+        [OperationContract]
+        List<EmployeeDetails> RequestReplyOperationV1();
 
         //If IsOneWay is true, return type should be void.
         [OperationContract(IsOneWay = true)]
