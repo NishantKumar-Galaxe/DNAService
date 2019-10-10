@@ -13,7 +13,7 @@ namespace ClassLibrary1
     [ServiceContract]
     public interface ISimpleService
     {
-        [OperationContract(IsOneWay =true)]
+        [OperationContract(IsOneWay = true)]
         void DoWork();
 
         //Message exchange pattern, default is "RequestReply"
@@ -36,5 +36,7 @@ namespace ClassLibrary1
         [OperationContract]
         List<Customer> GetCustomerList();
 
+        [OperationContract]
+        bool AddNewCustomer(Customer details);
     }
 }

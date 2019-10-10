@@ -36,6 +36,36 @@ namespace DataAccessLayer
             return list;
         }
 
+        public bool AddNewCustomer(Customer details)
+        {
+            bool result = false;
+            //CustomerID CompanyName ContactName ContactTitle    Address City    Region PostalCode  Country Phone   Fax
+            //BERGS   Berglunds snabbköp  Christina Berglund  Order Administrator Berguvsvägen  8 Luleå NULL    S - 958 22    Sweden  0921 - 12 34 65   0921 - 12 34 67
+            StringBuilder insert = new StringBuilder();
+            insert.Append("insert into Customers select ");
+            //insert.Append("'" + details.CustomerID + "',");
+            insert.Append("'" + details.CustomerID + "',");
+            insert.Append("'" + details.CompanyName + "',");
+            insert.Append("'" + details.ContactName + "',");
+            insert.Append("'" + details.ContactTitle + "',");
+            insert.Append("'" + details.Address + "',");
+            insert.Append("'" + details.City + "',");
+            insert.Append("'" + details.Region + "',");
+            insert.Append("'" + details.PostalCode + "',");
+            insert.Append("'" + details.Country + "',");
+            insert.Append("'" + details.Phone + "',");
+            insert.Append("'" + details.Fax + "' ");
+
+            List<Customer> list = new List<Customer>();
+            using (IDbConnection connection = SqlOpenConnection())
+            {
+                var resultData = connection.Query<Customer>(insert.ToString(), null, null, true, null, CommandType.Text);
+                if (resultData != null & resultData.Count() > 0)
+                    list = resultData.ToList<Customer>();
+            }
+            return result;
+        }
+
         /*
         public List<CurrencyCodes> GetCurrencyList()
         {

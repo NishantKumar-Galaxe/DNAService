@@ -28,5 +28,9 @@ namespace ClassLibrary1
         [WebGet(ResponseFormat =WebMessageFormat.Json)]
         List<Customer> GetCustomerList_Rest();
 
+        [OperationContract]
+        [WebInvoke(Method = "POST",ResponseFormat = WebMessageFormat.Json, RequestFormat = WebMessageFormat.Json)]
+        bool AddNewCustomer_Rest(Customer details);
+
     }
 }

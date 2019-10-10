@@ -83,5 +83,17 @@ namespace ClassLibrary1
             DataAccess data = new DataAccess();
             return data.GetCustomerList();
         }
+
+        public bool AddNewCustomer_Rest(Customer details)
+        {
+            DataAccess data = new DataAccess();
+            return data.AddNewCustomer(details);
+        }
+
+        public bool AddNewCustomer(Customer details)
+        {
+            DataAccess data = new DataAccess();
+            return data.AddNewCustomer(details);
+        }
     }
 }
