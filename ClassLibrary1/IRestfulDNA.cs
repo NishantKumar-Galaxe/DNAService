@@ -1,4 +1,5 @@
-﻿using DataAccessLaer;
+﻿using DataAccessLayer;
+using DataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,10 @@ namespace ClassLibrary1
 
         [WebGet(ResponseFormat = WebMessageFormat.Json)]
         List<EmployeeDetails> RequestReplyOperation_RestV1();
+
+        [OperationContract]
+        [WebGet(ResponseFormat =WebMessageFormat.Json)]
+        List<Customer> GetCustomerList_Rest();
 
     }
 }

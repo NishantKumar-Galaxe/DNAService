@@ -1,4 +1,5 @@
-﻿using DataAccessLaer;
+﻿using DataAccessLayer;
+using DataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,9 @@ namespace ClassLibrary1
         //If IsOneWay is true, return type should be void.
         [OperationContract(IsOneWay = true)]
         void OneWayOperationDemo();
+
+        [OperationContract]
+        List<Customer> GetCustomerList();
 
     }
 }

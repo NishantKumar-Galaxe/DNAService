@@ -1,4 +1,5 @@
-﻿using DataAccessLaer;
+﻿using DataAccessLayer;
+using DataModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -71,5 +72,16 @@ namespace ClassLibrary1
             return employeeList;
         }
 
+        public List<Customer> GetCustomerList_Rest()
+        {
+            DataAccess data = new DataAccess();
+            return data.GetCustomerList();
+        }
+
+        public List<Customer> GetCustomerList()
+        {
+            DataAccess data = new DataAccess();
+            return data.GetCustomerList();
+        }
     }
 }

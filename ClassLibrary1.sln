@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29020.237
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{B1B61703-2FF1-4C2F-A13F-2629A18EFF5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNAWcfService", "ClassLibrary1\DNAWcfService.csproj", "{B1B61703-2FF1-4C2F-A13F-2629A18EFF5B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{EB91EAC0-C890-4A46-B3E3-2AFFC430F761}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLaer", "DataAccessLaer\DataAccessLaer.csproj", "{22AAE51D-60F8-4146-80A8-B6C4FF11B908}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLaer\DataAccessLayer.csproj", "{22AAE51D-60F8-4146-80A8-B6C4FF11B908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{33BCEA0A-6C0F-4CD0-B291-D9F512B7D15C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{22AAE51D-60F8-4146-80A8-B6C4FF11B908}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22AAE51D-60F8-4146-80A8-B6C4FF11B908}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22AAE51D-60F8-4146-80A8-B6C4FF11B908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BCEA0A-6C0F-4CD0-B291-D9F512B7D15C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BCEA0A-6C0F-4CD0-B291-D9F512B7D15C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BCEA0A-6C0F-4CD0-B291-D9F512B7D15C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BCEA0A-6C0F-4CD0-B291-D9F512B7D15C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

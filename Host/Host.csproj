@@ -53,9 +53,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
+    <ProjectReference Include="..\ClassLibrary1\DNAWcfService.csproj">
       <Project>{b1b61703-2ff1-4c2f-a13f-2629a18eff5b}</Project>
-      <Name>ClassLibrary1</Name>
+      <Name>DNAWcfService</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

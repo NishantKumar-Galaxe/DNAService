@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccessLaer
+namespace DataAccessLayer
 {
 
     public static class EmployeeData

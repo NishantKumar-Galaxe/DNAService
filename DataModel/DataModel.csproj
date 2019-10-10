@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{22AAE51D-60F8-4146-80A8-B6C4FF11B908}</ProjectGuid>
+    <ProjectGuid>{33BCEA0A-6C0F-4CD0-B291-D9F512B7D15C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataAccessLaer</RootNamespace>
-    <AssemblyName>DataAccessLaer</AssemblyName>
+    <RootNamespace>DataModel</RootNamespace>
+    <AssemblyName>DataModel</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -35,7 +35,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeData.cs" />
-    <Compile Include="EmployeeDetails.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Order.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

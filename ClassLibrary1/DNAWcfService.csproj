@@ -55,9 +55,13 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DataAccessLaer\DataAccessLaer.csproj">
+    <ProjectReference Include="..\DataAccessLaer\DataAccessLayer.csproj">
       <Project>{22aae51d-60f8-4146-80a8-b6c4ff11b908}</Project>
-      <Name>DataAccessLaer</Name>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{33bcea0a-6c0f-4cd0-b291-d9f512b7d15c}</Project>
+      <Name>DataModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
