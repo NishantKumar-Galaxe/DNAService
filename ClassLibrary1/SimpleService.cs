@@ -11,10 +11,13 @@ using System.Threading;
 
 namespace ClassLibrary1
 {
-    [ServiceBehavior(AddressFilterMode = AddressFilterMode.Any)]
+    //[ServiceBehavior(AddressFilterMode = AddressFilterMode.Any, ConcurrencyMode = ConcurrencyMode.Single, InstanceContextMode = InstanceContextMode.PerCall)]
+
+    [ServiceBehavior(AddressFilterMode = AddressFilterMode.Any, ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerSession)]
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SimpleService" in both code and config file together.
     public class SimpleService : ISimpleService, IReportService, IRestfulDNA
     {
+        public int i;
         public SimpleService()
         {
             EmployeeData.AddEmploeeDetails(10000, 10);
@@ -94,6 +97,18 @@ namespace ClassLibrary1
         {
             DataAccess data = new DataAccess();
             return data.AddNewCustomer(details);
+        }
+
+        /// <summary>
+        /// This method is to test concurrency behaviour, instance mode.
+        /// </summary>
+
+        public void CheckConcurrencyBehaviour(int clientId)
+        {
+            i++;
+            Console.WriteLine($" client {clientId} with value  {i.ToString()} is running on Thread {Thread.CurrentThread.ManagedThreadId}  processed at {DateTime.Now}");
+
+            Thread.Sleep(5000);
         }
     }
 }

@@ -38,5 +38,8 @@ namespace ClassLibrary1
 
         [OperationContract]
         bool AddNewCustomer(Customer details);
+
+        [OperationContract(IsOneWay = true)]
+        void CheckConcurrencyBehaviour(int clientId);
     }
 }
